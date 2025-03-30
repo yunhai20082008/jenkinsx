@@ -8,6 +8,14 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - yunhai20082008/test_golang
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - yunhai20082008/test-golang2
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - yunhai20082008/test_jenkins_py
       require_self_approval: true
     cat: {}
@@ -25,6 +33,16 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      yunhai20082008/test-golang2:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      yunhai20082008/test_golang:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       yunhai20082008/test_jenkins_py:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -36,6 +54,34 @@ data:
     plugins:
       yunhai20082008/jenkinsx:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      yunhai20082008/test-golang2:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      yunhai20082008/test_golang:
       - approve
       - assign
       - help
@@ -74,6 +120,12 @@ data:
     triggers:
     - repos:
       - yunhai20082008/jenkinsx
+      trusted_org: yunhai20082008
+    - repos:
+      - yunhai20082008/test_golang
+      trusted_org: yunhai20082008
+    - repos:
+      - yunhai20082008/test-golang2
       trusted_org: yunhai20082008
     - repos:
       - yunhai20082008/test_jenkins_py
