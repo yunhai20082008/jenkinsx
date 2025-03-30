@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: yunhai20082008
+    provider: github
+    repository: sdasddda
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: yunhai20082008-sdasddda
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/yunhai20082008/sdasddda.git
+  org: yunhai20082008
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: sdasddda
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/yunhai20082008/sdasddda
