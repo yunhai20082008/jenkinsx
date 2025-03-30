@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: test-golang2
     - name: test_golang
     - name: test_jenkins_py
     scheduler: in-repo
