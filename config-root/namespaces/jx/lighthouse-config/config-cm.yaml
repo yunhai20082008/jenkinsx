@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         yunhai20082008/jenkinsx: true
+        yunhai20082008/sdasdasd: true
         yunhai20082008/sdasddda: true
         yunhai20082008/test-golang2: true
         yunhai20082008/test_golang: true
@@ -24,6 +25,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         yunhai20082008/jenkinsx: merge
+        yunhai20082008/sdasdasd: merge
         yunhai20082008/sdasddda: merge
         yunhai20082008/test-golang2: merge
         yunhai20082008/test_golang: merge
@@ -39,6 +41,7 @@ data:
         - needs-rebase
         repos:
         - yunhai20082008/jenkinsx
+        - yunhai20082008/sdasdasd
         - yunhai20082008/sdasddda
         - yunhai20082008/test_golang
         - yunhai20082008/test-golang2
@@ -53,6 +56,7 @@ data:
         - needs-rebase
         repos:
         - yunhai20082008/jenkinsx
+        - yunhai20082008/sdasdasd
         - yunhai20082008/sdasddda
         - yunhai20082008/test_golang
         - yunhai20082008/test-golang2

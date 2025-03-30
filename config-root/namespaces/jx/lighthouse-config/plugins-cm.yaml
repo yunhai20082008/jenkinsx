@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - yunhai20082008/sdasdasd
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - yunhai20082008/sdasddda
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -33,6 +37,11 @@ data:
           name: plugins
     external_plugins:
       yunhai20082008/jenkinsx:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      yunhai20082008/sdasdasd:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -63,6 +72,20 @@ data:
     plugins:
       yunhai20082008/jenkinsx:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      yunhai20082008/sdasdasd:
       - approve
       - assign
       - help
@@ -143,6 +166,9 @@ data:
     triggers:
     - repos:
       - yunhai20082008/jenkinsx
+      trusted_org: yunhai20082008
+    - repos:
+      - yunhai20082008/sdasdasd
       trusted_org: yunhai20082008
     - repos:
       - yunhai20082008/sdasddda
