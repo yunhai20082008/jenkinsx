@@ -8,7 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
-    - name: test_python_jenkinsx
+    - name: test_jenkins_py
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'

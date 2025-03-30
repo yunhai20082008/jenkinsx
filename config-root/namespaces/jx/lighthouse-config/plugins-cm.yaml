@@ -6,6 +6,10 @@ data:
       repos:
       - yunhai20082008/jenkinsx
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - yunhai20082008/test_jenkins_py
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,12 +25,31 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      yunhai20082008/test_jenkins_py:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     label:
       additional_labels: null
     owners: {}
     plugins:
       yunhai20082008/jenkinsx:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      yunhai20082008/test_jenkins_py:
       - approve
       - assign
       - help
@@ -52,6 +75,11 @@ data:
     - repos:
       - yunhai20082008/jenkinsx
       trusted_org: yunhai20082008
+    - repos:
+      - yunhai20082008/test_jenkins_py
+      trusted_org: yunhai20082008
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
