@@ -16,6 +16,8 @@ spec:
     provider: minikube
   environments:
   - key: dev
+    owner: yunhai20082008
+    repository: jenkinsx
   - key: staging
   - key: production
   ingress:
@@ -26,6 +28,8 @@ spec:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: yunhai20082008
   repository: bucketrepo
   secretStorage: local
   vault: {}
